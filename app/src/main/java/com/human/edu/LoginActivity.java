@@ -14,7 +14,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Toast.makeText(LoginActivity.this, "onDestroy상태6", Toast.LENGTH_LONG).show();
+        Toast.makeText(LoginActivity.this, "onDestory상태6", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(LoginActivity.this, "onRsume상태3", Toast.LENGTH_LONG).show();
+        Toast.makeText(LoginActivity.this, "onResume상태3", Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Toast.makeText(LoginActivity.this, "onCReate상태1", Toast.LENGTH_LONG).show();
+        Toast.makeText(LoginActivity.this, "onCreate상태1", Toast.LENGTH_LONG).show();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -61,18 +61,18 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
-    public void gotoMain(View view) {
+    //login.xml에서 onClick 속성을 gotoMain이라고 지정했을 경우 사용가능(아래)
+    public void gotoMain(View view) { //여기서 view는 클릭이벤트가 발생한 버튼
         EditText editTextID, editTextPassword;
-        editTextID = view.findViewById(R.id.editTextID);
-        editTextPassword = view.findViewById(R.id.editTextPassword);
-        //Toast.makeText(LoginActivity.this, editTextID.getText(),Toast.LENGTH_LONG).show();
-        //로그인 버튼을 클릭했을때
+        editTextID = findViewById(R.id.editTextID);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        //Toast.makeText(LoginActivity.this, "디버그: " + editTextID.getText(),Toast.LENGTH_LONG).show();
+        //로그인 버튼을 onClick했을때
         Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class);
-        //데이터를 입력해서
+        //데이터를 입력해서 메인액티비티 화면열기(아래)
         mainIntent.putExtra("editTextID", editTextID.getText().toString());//아이디
         mainIntent.putExtra("editTextPassword", editTextPassword.getText().toString());//암호
-        startActivity(mainIntent);//편지봉투(Intent)를 개봉 = 화면 불러오기실행
-        finish();//LoginActivity화면을 종료(프로그램종료x)
+        startActivity(mainIntent);//편지봉투Intent를 개봉 = 화면불러오기실행
+        //finish();//LoginActivity화면을 종료(프로그램종료X)
     }
 }

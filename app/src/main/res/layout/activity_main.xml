@@ -7,14 +7,27 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="168dp"
+        android:text="로그아웃"
+        android:textSize="30sp"
+        app:backgroundTint="#FF5722"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNaver" />
+
+    <Button
         android:id="@+id/btnNaver"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="120dp"
         android:onClick="goToNaver"
         android:text="네이버 접속"
         android:textSize="30sp"
-        app:backgroundTint="#21CC32"
+        app:backgroundTint="#52CC1E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,22 +37,9 @@
         android:id="@+id/btnTel"
         android:layout_width="0dp"
         android:layout_height="80dp"
-        android:layout_marginTop="48dp"
-        android:text="전화 걸기"
+        android:layout_marginTop="40dp"
+        android:text="전화걸기"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNaver" />
-
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="0dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="164dp"
-        android:text="로그아웃"
-        android:textSize="30sp"
-        app:backgroundTint="#F86826"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
