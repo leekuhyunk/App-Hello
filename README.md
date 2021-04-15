@@ -12,7 +12,7 @@
 - Object <String, Interger, Double, Class ...>
 - View <Layout, Button, TextView, EditText ...>
 - 로그인액티비티 화면 만들어서 startActive()로 띄우기 OK.
-- 액티비티간 페이지이동시 로그인 아이디/암호 값을 가져가는 연습.
+- 액티비티간 페이지이동시 로그인 아이디/암호 값을 가져가는 연습OK.
 - 리사이클러 뷰(recycler view) 콤포넌트사용.
 - 신규 앱 프로젝트 깃과 연동시키기(VCS메뉴사용:Version Controller System)
 - egov프로젝트 사용자단에서 회원 가입/마이페이지 생성하기 예정.
